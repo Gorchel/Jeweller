@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Uvelir</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="container-fluid" id="wrapper">
+		<div class="container" id="header">
+			<p><%= image_tag "header" %></p>
+			<h1>
+				Jeweller STUDIO Al'Shapovalov
+			</h1>
+			<nav class="row">
+				<div class="col-xs-4"><i class="fa fa-search"></i></div>
+				<div class="col-xs-4"><i class="fa fa-search"></i></div>
+				<div class="col-xs-4"><i class="fa fa-search"></i></div>
+			</nav>
+		</div>
+		<%= yield %>
+		<div class="container" id="footer">
+			<p><%= image_tag "line" %></p>
+			<p><%= image_tag "footer" %></p>
+		</div>
+	</div>
+</body>
+</html>

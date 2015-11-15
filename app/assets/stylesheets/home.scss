@@ -1,0 +1,33 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#home-container{
+	p{
+		text-align: justify;
+		font-family: 'Lobster', cursive;
+		font-size: 18px;
+	}
+
+	img{
+		width: 300px;
+	}
+	
+	#main-text{
+		font-size: 22px;
+	}
+}
+
+@media(max-width: 768px){
+	#main-text{
+		font-size: 14px !important;
+	}
+}
+
+.quote{
+
+	text-align: center;
+	i{
+		padding-top: 20px;
+	}
+}

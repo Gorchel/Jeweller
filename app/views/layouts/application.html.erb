@@ -4,8 +4,7 @@
   <title>Uvelir</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= csrf_meta_tags %>
 </head>
@@ -17,9 +16,18 @@
 				Jeweller STUDIO Al'Shapovalov
 			</h1>
 			<nav class="row">
-				<div class="col-xs-4"><i class="fa fa-search"></i></div>
-				<div class="col-xs-4"><i class="fa fa-search"></i></div>
-				<div class="col-xs-4"><i class="fa fa-search"></i></div>
+				<div class="col-xs-4">
+					<i class="fa fa-diamond fa-2x visible-xs"></i>
+					<p class="hidden-xs">Процесс производства</p>
+				</div>
+				<div class="col-xs-4">
+					<i class="fa fa-vk fa-2x visible-xs"></i>
+					<p class="hidden-xs">Мы в соц. сетях</p>
+				</div>
+				<div class="col-xs-4">
+					<i class="fa fa-group fa-2x visible-xs"></i>
+					<p class="hidden-xs">О нас</p>
+				</div>
 			</nav>
 		</div>
 		<%= yield %>

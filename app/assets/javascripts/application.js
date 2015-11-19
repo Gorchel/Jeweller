@@ -16,3 +16,8 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).on('page:change', function(){
+	path = window.location.pathname.slice(1);
+	if( path !== '')
+		$('#' + path +'-btn').addClass('active');
+})

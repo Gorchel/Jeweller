@@ -6,7 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans:700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=Map,Placemark" type="text/javascript"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -17,21 +18,21 @@
 				Jeweller STUDIO Al'Shapovalov
 			</h1>
 			<nav class="row">
-				<div class="col-xs-4">
+				<div class="col-xs-4" id="production-btn">
 					<%= link_to production_path do%>
-						<i class="fa fa-diamond fa-2x visible-xs"></i>
+						<i class="fa fa-diamond fa-1x visible-xs"></i>
 						<p class="hidden-xs">Процесс производства</p>
 					<% end %>
 				</div>
-				<div class="col-xs-4">
+				<div class="col-xs-4" id="social-btn">
 					<%= link_to social_path do%>
-						<i class="fa fa-vk fa-2x visible-xs"></i>
+						<i class="fa fa-vk fa-1x visible-xs"></i>
 						<p class="hidden-xs">Мы в соц. сетяx</p>
 					<% end %>
 				</div>
-				<div class="col-xs-4">
+				<div class="col-xs-4" id="about-btn">
 					<%= link_to about_path do%>
-						<i class="fa fa-map fa-2x visible-xs"></i>
+						<i class="fa fa-map fa-1x visible-xs"></i>
 						<p class="hidden-xs">Как нас найти</p>
 					<% end %>
 				</div>

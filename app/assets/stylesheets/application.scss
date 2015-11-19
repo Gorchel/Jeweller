@@ -6,10 +6,13 @@
 @import "bootstrap";
 @import "**/*";
 
+body{
+	font-family: 'Lobster';
+}
+
 #header,#footer{
 	p{
 		text-align: center;
-
 		img{
 			width: 35%;
 		}
@@ -19,8 +22,12 @@
 #header {
 	h1{
 		text-align: center;
-		font-family: 'Lobster', cursive;
+		font-family: 'PT Sans', sans-serif;
 		font-size: 54px;
+	}
+	
+	img{
+		cursor: pointer;
 	}
 }
 
@@ -38,7 +45,6 @@ nav{
 	border: 1px solid black;
 	p{
 		font-size: 20px;
-		font-family: 'Lobster', cursive;
 		margin: 0px;
 		padding: 10px 5px;
 	}
@@ -47,7 +53,6 @@ nav{
 	}
 	div{
 		text-align: center;
-		//padding: 10px 0px 10px 0px;
 
 		&:hover{
 			cursor: pointer;
@@ -57,5 +62,14 @@ nav{
 		&:nth-child(1),&:nth-child(2){
 			border-right: 1px solid black;
 		}
+	}
+	a{
+		color: #333333;
+
+		&:hover{
+			text-decoration: none;
+			color: black;
+		}
+
 	}
 }

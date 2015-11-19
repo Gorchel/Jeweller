@@ -5,28 +5,35 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= csrf_meta_tags %>
 </head>
 <body>
 	<div class="container-fluid" id="wrapper">
 		<div class="container" id="header">
-			<p><%= image_tag "header" %></p>
+			<p><%= link_to image_tag("header"), '/' %></p>
 			<h1>
 				Jeweller STUDIO Al'Shapovalov
 			</h1>
 			<nav class="row">
 				<div class="col-xs-4">
-					<i class="fa fa-diamond fa-2x visible-xs"></i>
-					<p class="hidden-xs">Процесс производства</p>
+					<%= link_to production_path do%>
+						<i class="fa fa-diamond fa-2x visible-xs"></i>
+						<p class="hidden-xs">Процесс производства</p>
+					<% end %>
 				</div>
 				<div class="col-xs-4">
-					<i class="fa fa-vk fa-2x visible-xs"></i>
-					<p class="hidden-xs">Мы в соц. сетях</p>
+					<%= link_to social_path do%>
+						<i class="fa fa-vk fa-2x visible-xs"></i>
+						<p class="hidden-xs">Мы в соц. сетяx</p>
+					<% end %>
 				</div>
 				<div class="col-xs-4">
-					<i class="fa fa-group fa-2x visible-xs"></i>
-					<p class="hidden-xs">О нас</p>
+					<%= link_to about_path do%>
+						<i class="fa fa-map fa-2x visible-xs"></i>
+						<p class="hidden-xs">Как нас найти</p>
+					<% end %>
 				</div>
 			</nav>
 		</div>

@@ -11,6 +11,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<!--autoplay: true -->
+	<%= audio_tag "audio.mp3",autoplay: true, id: 'background-audio' %>
 	<div class="container-fluid" id="wrapper">
 		<div class="container" id="header">
 			<p><%= link_to image_tag("header"), '/' %></p>
@@ -19,26 +21,22 @@
 			</h1>
 			<nav class="row">
 				<div class="col-xs-4" id="production-btn">
-					<%= link_to production_path do%>
-						<i class="fa fa-diamond fa-1x visible-xs"></i>
-						<p class="hidden-xs">Процесс производства</p>
-					<% end %>
+					<i class="fa fa-diamond fa-1x visible-xs"></i>
+					<p class="hidden-xs">Процесс производства</p>	
 				</div>
 				<div class="col-xs-4" id="social-btn">
-					<%= link_to social_path do%>
-						<i class="fa fa-vk fa-1x visible-xs"></i>
-						<p class="hidden-xs">Мы в соц. сетяx</p>
-					<% end %>
+					<i class="fa fa-vk fa-1x visible-xs"></i>
+					<p class="hidden-xs">Мы в соц. сетяx</p>
 				</div>
 				<div class="col-xs-4" id="about-btn">
-					<%= link_to about_path do%>
-						<i class="fa fa-map fa-1x visible-xs"></i>
-						<p class="hidden-xs">Как нас найти</p>
-					<% end %>
+					<i class="fa fa-map fa-1x visible-xs"></i>
+					<p class="hidden-xs">Как нас найти</p>
 				</div>
 			</nav>
 		</div>
-		<%= yield %>
+		<div id="wrapper-content">
+			<%= yield %>
+		</div>
 		<div class="container" id="footer">
 			<p><%= image_tag "line" %></p>
 			<p><%= image_tag "footer" %></p>

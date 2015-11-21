@@ -13,11 +13,43 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require turbolinks
 //= require_tree .
 
-$(document).on('page:change', function(){
-	path = window.location.pathname.slice(1);
-	if( path !== '')
-		$('#' + path +'-btn').addClass('active');
+$(document).ready(function(){
+	$('#production-btn').click(function(){
+		giveHtml('production',1);
+	})
+	$('#social-btn').click(function(){
+		giveHtml('social',2);
+	})
+	$('#about-btn').click(function(){
+		giveHtml('about',3);
+	})
+	
 })
+
+function giveHtml(handler,bool){
+	var height;
+	$.ajax({
+	  url: "/"+ handler,
+	}).done(function(html) {
+	  $('#wrapper-content').html(html);
+	  if (bool === 3){
+	  	ymaps.ready(init());
+	  }
+	  if (bool === 2){
+	  	height = $('.social-img-wrapper').width();
+	  	$('.social-img-wrapper').height(height);
+	  }  
+	});
+}
+
+init = function() {
+  var myMap, myPlacemark;
+  myMap = new ymaps.Map("map", {
+    center: [55.76, 37.64],
+    zoom: 7
+  });
+  myPlacemark = new ymaps.Placemark([55.76, 37.64]);
+  return myMap.geoObjects.add(myPlacemark);
+};

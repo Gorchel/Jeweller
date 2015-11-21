@@ -47,31 +47,23 @@ nav{
 	p{
 		font-size: 20px;
 		margin: 0px;
-		padding: 10px 5px;
+	    padding: 10px 5px;
 	}
 	i{
 		padding: 5px;
 	}
 	div{
 		text-align: center;
-
+		color: #333;
 		&:hover{
 			cursor: pointer;
 			background: rgb(204, 204, 204);
+			color: black;
 		}
 
 		&:nth-child(1),&:nth-child(2){
 			border-right: 1px solid black;
 		}
-	}
-	a{
-		color: #333333;
-
-		&:hover{
-			text-decoration: none;
-			color: black;
-		}
-
 	}
 }
 

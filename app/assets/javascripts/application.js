@@ -30,6 +30,8 @@ $(document).ready(function(){
 
 function giveHtml(handler,bool){
 	var height;
+	var preloader = '<div class="container" id="preloader"><i class="fa fa-spinner fa-pulse fa-3x"></i></div>';
+	$('#wrapper-content').html(preloader);
 	$.ajax({
 	  url: "/"+ handler,
 	}).done(function(html) {

@@ -1,38 +1,39 @@
 <div class="container">
 	<div class="row" id="social-panel">
-		<a href="http://vk.com/jeweller_studio" class="hidden-xs">
+		<a href="http://vk.com/jeweller_studio" target="_blank" class="hidden-xs">
 			<div class="col-xs-4">
 				<span class="fa-stack fa-3x"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-vk fa-stack-1x"></i></span>
 			</div>
 		</a>
-		<a href="http://vk.com/jeweller_studio" class="hidden-sm hidden-md hidden-lg">
+		<a href="http://vk.com/jeweller_studio" target="_blank" class="hidden-sm hidden-md hidden-lg">
 			<div class="col-xs-4">
 				<span class="fa-stack fa-2x"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-vk fa-stack-1x"></i></span>
 			</div>
 		</a>
 		<div class="col-xs-4">
-			<a href="#" class="hidden-xs">
+			<a href="https://www.instagram.com/shapovalov_alexander/" target="_blank" class="hidden-xs">
 				<span class="fa-stack fa-3x"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x"></i></span>
 			</a>
-			<a href="#" class="hidden-sm hidden-md hidden-lg">
+			<a href="https://www.instagram.com/shapovalov_alexander/" target="_blank" class="hidden-sm hidden-md hidden-lg">
 				<span class="fa-stack fa-2x"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x"></i></span>
 			</a>
 		</div>
 		<div class="col-xs-4">
-			<a href="#" class="hidden-xs">
+			<a href="https://www.facebook.com/al.shapovalov" target="_blank" class="hidden-xs">
 				<span class="fa-stack fa-3x"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i></span>
 			</a>
-			<a href="#" class="hidden-sm hidden-md hidden-lg">
+			<a href="https://www.facebook.com/al.shapovalov" target="_blank" class="hidden-sm hidden-md hidden-lg">
 				<span class="fa-stack fa-2x"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i></span>
 			</a>
 		</div>
 	</div>
 </div>
 <div class="container" id="social-wrapper">
-	<div class="row">
-		<% @vk_photo.each do |handler| %>
-			<div style="background: url(<%= handler %>)"class="social-img-wrapper col-xs-6 col-sm-4 col-md-3 col-lg-3">
-			</div>
-		<% end %>
+	<div class="row">	
+	 <% @vk_photo.each do |handler| %>
+	  <a href=<%= handler[1] %> target="_blank">
+	    <div style="background: url(<%= handler[0] %>)"class="social-img-wrapper col-xs-6 col-sm-4 col-md-3 col-lg-3"></div>
+	  </a>
+	<% end %>	
 	</div>
 </div>

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Uvelir</title>
+  <title>Jeweller STUDIO Al'Shapovalov</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans:700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
    	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=Map,Placemark" type="text/javascript"></script>
+   	<meta property="og:image" content="/assets/header_vk.jpg"/>
   <%= csrf_meta_tags %>
 </head>
 <body>
 	<!--autoplay: true -->
-	<%= audio_tag "audio.mp3",autoplay: true, id: 'background-audio' %>
+	<%= audio_tag "audio.mp3",autoplay: true, loop: true, id: 'background-audio' %>
 	<div class="container-fluid" id="wrapper">
 		<div class="container" id="header">
 			<p><%= link_to image_tag("header"), '/' %></p>
-			<h1>
-				Jeweller STUDIO Al'Shapovalov
-			</h1>
 			<nav class="row">
 				<div class="col-xs-4" id="production-btn">
 					<i class="fa fa-diamond fa-1x visible-xs"></i>
@@ -39,7 +39,7 @@
 		</div>
 		<div class="container" id="footer">
 			<p><%= image_tag "line" %></p>
-			<p><%= image_tag "footer" %></p>
+			<p><%= image_tag("footer") %></p>
 		</div>
 	</div>
 </body>

@@ -31,17 +31,7 @@
 	background-size: cover !important;
 	background-position: center !important;
 	border: 1px solid black;
-}
-
-@media(min-width: 1200px){
-	.social-img-wrapper{
-		-webkit-filter: grayscale(100%);
-		filter: grayscale(100%); 
-		&:hover{
-			-webkit-filter: none; 
-			filter: none;
-		}
-	}
+	cursor: pointer;
 }
 
 @media(max-width: 768px){

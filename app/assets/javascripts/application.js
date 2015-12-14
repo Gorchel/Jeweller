@@ -26,6 +26,17 @@ $(document).ready(function(){
 		giveHtml('about',3);
 	})
 	
+	$('#siteMusic').click(function(){
+		var oAudio = document.getElementById('background-audio');
+
+		if ($(this).hasClass('activeMusic')){
+			oAudio.pause();
+			$(this).removeClass('activeMusic');
+		}else{
+			oAudio.play();
+			$(this).addClass('activeMusic');
+		}	
+	})
 })
 
 function giveHtml(handler,bool){

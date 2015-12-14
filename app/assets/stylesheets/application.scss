@@ -11,11 +11,68 @@ body{
 	font-size: 20px;
 }
 
-#translatePanel{
-	border: 1px solid #333;
-	border-radius: 4px;
-	font-size: 14px;
+.activeMusic{
+	background-color: rgb(204, 204, 204);
 }
+
+#translatePanelRow{
+	text-align: right;
+	padding-top: 8px;
+	padding-right: 15px;
+
+	#translatePanel{
+		display: inline-block;
+		border: 1px solid #333;
+		border-radius: 4px;
+		font-size: 14px;
+		width: 100px;
+		height: 30px;
+		text-align: center;
+
+		div{
+			height: 100%;
+			padding: 0px;
+
+			a,i{
+				text-decoration: none;
+				color: #333;
+				width: 100%;
+				height: 100%;
+				display: inline-block;
+				padding-top: 3px;
+			}
+			
+			i:first-child{
+				border-radius: 0px 4px 4px 0px;
+			}
+			
+			i:last-child{
+				border-radius: 4px 0px 0px 4px;	
+			}
+
+			a:hover{
+				color: black;
+			}
+
+			i{
+				padding-top: 8px;
+			}
+
+			i:hover{
+				cursor: pointer;
+			}
+		}
+
+		.borderRight{
+			border-right: 1px solid #333; 
+		}
+	}
+
+	.activeTranslate{
+		background-color: rgb(204, 204, 204);
+	}
+}
+
 
 #header{
 	p{

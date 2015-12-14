@@ -16,14 +16,21 @@
 </head>
 <body>
 	
-	<%= audio_tag "audio.mp3",autoplay: true, loop: true, id: 'background-audio' %>
+	<%= audio_tag "audio.mp3",autoplay: true, loop: true, id: 'background-audio'%>
 	<div class="container-fluid" id="wrapper">
 		<div class="container" id="header">
-			<div class="row">
-			<div id="translatePanel" class="col-xs-offset-9 col-xs-3 col-sm-offset-10 col-sm-2 col-md-offset-10 col-md-2 col-lg-offset-10 col-lg-2">
-				<a href="/">рус</a>
-				<a href="/?locale=en">eng</a>
-			</div>
+			<div class="row" id="translatePanelRow">
+				<div id="translatePanel" class='row'>
+					<div class="col-xs-4 borderRight">
+						<i class="fa fa-music activeMusic" id="siteMusic"></i>
+					</div>
+					<div class="col-xs-4 borderRight <%= @ruClass %>">
+						<a href="/">рус</a>
+					</div>
+					<div class="col-xs-4 <%= @enClass %>">
+						<a href="/?locale=en">eng</a>
+					</div>
+				</div>
 			</div>
 			<p><%= link_to image_tag("header"), '/' %></p>
 			<nav class="row">

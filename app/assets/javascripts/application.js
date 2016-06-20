@@ -60,9 +60,9 @@ function giveHtml(handler,bool){
 init = function() {
   var myMap, myPlacemark;
   myMap = new ymaps.Map("map", {
-    center: [55.76, 37.64],
-    zoom: 7
+    center: [44.61660700178595,33.5251130000002],
+    zoom: 15
   });
-  myPlacemark = new ymaps.Placemark([55.76, 37.64]);
+  myPlacemark = new ymaps.Placemark([44.61660700178595,33.5251130000002]);
   return myMap.geoObjects.add(myPlacemark);
 };

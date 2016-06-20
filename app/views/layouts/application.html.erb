@@ -20,19 +20,29 @@
 	<div class="container-fluid" id="wrapper">
 		<div class="container" id="header">
 			<div class="row" id="translatePanelRow">
-				<div id="translatePanel" class='row'>
-					<div class="col-xs-4 borderRight">
-						<i class="fa fa-music activeMusic" id="siteMusic"></i>
+				<div class="col-xs-6">
+					<div id="siteMusic" class='row activeMusic'>
+						<i class="fa fa-music"></i>
 					</div>
-					<div class="col-xs-4 borderRight <%= @ruClass %>">
-						<a href="/">рус</a>
-					</div>
-					<div class="col-xs-4 <%= @enClass %>">
-						<a href="/?locale=en">eng</a>
+				</div>
+				<div class="col-xs-6">
+					<div id="translatePanel" class='row'>
+						<div class="col-xs-3 borderRight <%= @ruClass %>">
+							<a href="/">рус</a>
+						</div>
+						<div class="col-xs-3 borderRight <%= @enClass %>">
+							<a href="/?locale=en">eng</a>
+						</div>
+						<div class="col-xs-3 borderRight <%= @deClass %>">
+							<a href="/?locale=de">de</a>
+						</div>
+						<div class="col-xs-3 <%= @esClass %>">
+							<a href="/?locale=es">es</a>
+						</div>
 					</div>
 				</div>
 			</div>
-			<p><%= link_to image_tag("header"), '/' %></p>
+			<p><%= link_to image_tag("header.jpg"), '/' %></p>
 			<nav class="row">
 				<div class="col-xs-4" id="production-btn">
 					<i class="fa fa-diamond fa-1x visible-xs"></i>
@@ -52,8 +62,8 @@
 			<%= yield %>
 		</div>
 		<div class="container" id="footer">
-			<p><%= image_tag "line" %></p>
-			<p><%= image_tag("footer") %></p>
+			<p><%= image_tag "line.jpg" %></p>
+			<p><%= image_tag "footer.jpg" %></p>
 		</div>
 	</div>
 </body>

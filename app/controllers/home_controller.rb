@@ -3,8 +3,12 @@ class HomeController < ApplicationController
  
 	def set_locale
 	  I18n.locale = params[:locale] || I18n.default_locale
-	  if params[:locale] 
+	  if params[:locale] === 'en' 
 	  	@enClass = 'activeTranslate'
+	  elsif params[:locale] === 'es' 
+	  	@esClass = 'activeTranslate'
+	  elsif params[:locale] === 'de' 
+	  	@deClass = 'activeTranslate'
 	  else
 	  	@ruClass = 'activeTranslate'
 	  end
